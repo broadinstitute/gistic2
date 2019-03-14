@@ -1,0 +1,56 @@
+This document contains the installation and example run instructions
+for GISTIC compiled for 64-bit linux.  
+
+#####################################################
+To install and run GISTIC
+
+1) Copy the file "GISTIC_2_0_X.tar.gz" to the directory where you want to
+   install GISTIC (X is a stand-in for the final number of the actual version).
+
+       cp GISTIC_2_0_X.tar.gz <gistic_install_dir>
+
+2) Change to the install directory and unpack the installation file:
+
+       cd <gistic_install_dir>
+       tar zxf GISTIC_2_0_X.tar.gz
+
+3) In order to run the GISTIC executable, the MATLAB Compiler Runtime (MCR) version 
+   8.3 (R2014a) must be installed on your computer.  If the MCR is already installed, 
+   locate it on your system.  We will refer to the location of the MCR installation 
+   as <mcr_root> in this document.  
+
+   If the MCR is not installed, you must install it. First change to
+   the MCR_Installer directory and decompress the MCR installation code:
+
+      cd <gistic_install_dir>/MCR_Installer
+      unzip MCRInstaller.zip
+
+   The MCR directory <mcr_root> is the directory in which the Matlab runtime 
+   components will be installed and is in this document presumed to be a sub-
+   directory of the GISTIC 2.0 install directory named MATLAB_Compiler_Runtime. 
+   If you choose a different location, you will have to modify the example code 
+   (step 4). Run the install program, specifying the <mcr_root> directory:
+
+       ./install -mode silent -agreeToLicense yes -destinationFolder <mcr_root>
+
+   (Note: it is also possible to use an X11 GUI to install the MCR. This release
+   of the MCR will attempt to use X11 (ignoring 'silent' mode) if the DISPLAY
+   variable is set. The work-around is to 'unset DISPLAY'.)
+
+4) This distribution includes example input files for a complete GISTIC run. 
+   Run the run_gistic_example script from the <gistic_install_dir> to test 
+   the GISTIC 2.0 installation:
+
+      cd <gistic_install_dir>
+      ./run_gistic_example
+
+   The results of the example analysis can be found in the example_results
+   directory of <gistic_install_dir>.
+
+   If you choose a different directory for the MCR and would like to 
+   run the "run_gistic_example" script to test the installation, you 
+   must first edit the 'gistic2' script and change the definition of MCR_ROOT to 
+   reference your MCR installation directory.
+
+The run_gistic_example script is a template that can be customized for the
+analysis of your own DNA copy number data.

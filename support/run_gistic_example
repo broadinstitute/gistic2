@@ -1,0 +1,18 @@
+#!/bin/sh
+## run example GISTIC analysis
+
+## output directory
+echo --- creating output directory ---
+basedir=`pwd`/example_results
+mkdir -p $basedir 
+
+echo --- running GISTIC ---
+## input file definitions
+segfile=`pwd`/examplefiles/segmentationfile.txt
+markersfile=`pwd`/examplefiles/markersfile.txt
+refgenefile=`pwd`/refgenefiles/hg16.mat
+alf=`pwd`/examplefiles/arraylistfile.txt
+cnvfile=`pwd`/examplefiles/cnvfile.txt
+## call script that sets MCR environment and calls GISTIC executable 
+./gistic2 -b $basedir -seg $segfile -mk $markersfile -refgene $refgenefile -alf $alf -cnv $cnvfile -genegistic 1 -smallmem 1 -broad 1 -brlen 0.5 -conf 0.90 -armpeel 1 -savegene 1 -gcm extreme
+
