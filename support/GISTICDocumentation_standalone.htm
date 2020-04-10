@@ -20,6 +20,14 @@ td {
   padding: 2px 16px;
   font-size: 14px;
 }
+span {
+  text-color: blue;
+  text-align: right;
+}
+.infile { display:block }
+.infile span { display:block;float:right;margin-left:10px;margin-right:10px;font-style:italic; }
+
+
 </style>
 </head>
 
@@ -70,8 +78,9 @@ Beroukhim R, Getz G, et al. (2007).  "Assessing the significance of chromosomal 
 <p>
  
 <h3>Input Parameters</h3>
-<p>
 <div class="paramtable">
+<i>Variable Name</i> refers to the input parameter when running GISTIC by calling it as a MATLAB<sup>TM</sup> function; <i>Option String</i> refers to the command-line parameter when running GISTIC as a stand-alone executable program.
+<p>
 <table>
 <tr>
 <th>Variable Name</th>
@@ -240,9 +249,9 @@ Beroukhim R, Getz G, et al. (2007).  "Assessing the significance of chromosomal 
 <h3>Input Files</h3>
 <p>
 
-<ol>
+<ol class="infile">
  
-<li><b>Segmentation File</b> (-seg) &nbsp;&nbsp;&nbsp;&nbsp; <i>REQUIRED</i>
+<li><b>Segmentation File</b> (-seg) <span>REQUIRED</span>
 <p>
 The segmentation file contains the segmented data for all the samples identified by GLAD, CBS, or some other segmentation algorithm.  (See GLAD file format in the Genepattern file formats documentation.)  It is a six column, tab-delimited file with an optional first line identifying the columns.  Positions are in base pair units.
 <p>
@@ -263,7 +272,7 @@ The segmentation file contains the segmented data for all the samples identified
 <p>
 </li>
 
-<li><b>Markers File</b> (-mk) &nbsp;&nbsp;&nbsp;&nbsp; <i>OPTIONAL</i>
+<li><b>Markers File</b> (-mk) <span>OPTIONAL</span>
 <p>
 The markers file identifies the marker positions used in the original dataset (before segmentation) for array or capture experiments. As of GISTIC release 2.0.23, the markers file is an optional input - if omitted, pseudo markers are generated as uniformly as possible using the maxspace input parameter.  
 <p>
@@ -280,19 +289,19 @@ The markers file is a three column, tab-delimited file with an optional header. 
 <a href="examplefiles/markersfile.txt" target="_blank">Example Markers File</a>
 </li>
 
-<li><b>Reference Genome File</b> (-refgene) &nbsp;&nbsp;&nbsp;&nbsp; <i>REQUIRED</i>
+<li><b>Reference Genome File</b> (-refgene) <span>REQUIRED</span>
 <p>
 The reference genome file contains information about the location of genes and cytobands on a given build of the genome. Reference genome files are created in MatlabTM and are not viewable with a text editor. The GISTIC 2.0 release has four reference genomes located in the refgenefiles directory: hg16.mat, hg17.mat, hg18.mat, and hg19.mat. 
 </li>
 
-<li><b>Array List File</b> (-alf) &nbsp;&nbsp;&nbsp;&nbsp; <i>OPTIONAL</i>
+<li><b>Array List File</b> (-alf) <span>OPTIONAL</span>
 <p>
 The array list file is an optional file identifying the subset of samples to be used in the analysis.  It is a one column file with an optional header (array).  The sample identifiers listed in the array list file must match the sample names given in the segmentation file. 
 <p>
 <a href="examplefiles/arraylistfile.txt" target="_blank">Example Array List File</a>
 </li>
 
-<li><b>CNV File</b> (-cnv) &nbsp;&nbsp;&nbsp;&nbsp; <i>OPTIONAL</i>
+<li><b>CNV File</b> (-cnv) <span>OPTIONAL</span>
 <p>
 There are two options for the file specifying germ line CNVs to be excluded from the analysis.  The first option allows CNVs to be identified by marker name and is platform-specific.  The second option allows the CNVs to be identified by genomic location, which is platform independent but genome-build dependent.
 <p>
@@ -377,38 +386,41 @@ The remaining rows list the genes contained in each wide peak.  For peaks that c
 <li><b>Deletion Genes File</b> (del_genes.conf_<i>XX</i>.txt, where <i>XX</i> is the confidence level)
 <p>
 The del genes file contains one column for each deletion peak identified in the GISTIC analysis.  The file format for the del genes file is identical to the format for the amp genes file.
-<p>
+<div>
 <img border=0 width=582 height=85 src="GISTICDocumentation_standalone_files/image002.png"
-<p>
+</div>
 </li>
 
 <li><b>Gistic Scores File</b> (scores.gistic)
 <p>
 The scores file lists the q-values [presented as -log10(q)], G-scores, average amplitudes among aberrant samples, and frequency of aberration, across the genome for both amplifications and deletions. The scores file is viewable with the Genepattern SNPViewer module and may be imported into the Integrated Genomics Viewer (IGV).
-<p>
+<div>
 <img border=0 width=479 height=151 src="GISTICDocumentation_standalone_files/image004.png">
-<p>
+</div>
 </li>
 
 <li><b>Segmented Copy Number</b> (raw_copy_number.pdf)
 <p>
 A .pdf or .png file containing a heatmap image of the genomic profiles of the segmented input copy number data. The genome is represented along the vertical axis and samples are arranged horizontally.
-<p>
+<div>
 <img  border=0 width=800 height=600 src="GISTICDocumentation_standalone_files/raw_copy_number.png">
-<p>
+</div>
 </li>
+
 <li><b>Amplification Score GISTIC plot</b> (amp_qplot.pdf)
 <p>
 The amplification pdf is a plot of the G-scores (top) and q-values (bottom) with respect to amplifications for all markers over the entire region analyzed.
+<div>
 <img border=0 width=550 height=600 src="GISTICDocumentation_standalone_files/amp_qplot.png">
-<p>
+</div>
 </li>
 
 <li><b>Deletion Score/q-value GISTIC plot</b> (del_qplot.pdf)
 <p>
 The deletion pdf is a plot of the G-scores (top) and q-values (bottom) with respect to deletions for all markers over the entire region analyzed.
+<div>
 <img border=0 width=550 height=600 src="GISTICDocumentation_standalone_files/del_qplot.png">
-<p>
+</div>
 </li>
 </ol>
  
