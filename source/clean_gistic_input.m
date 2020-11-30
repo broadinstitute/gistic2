@@ -10,14 +10,11 @@ function D = clean_gistic_input(D,cnv_file,remove_sex,join_segment_size,center)
 % 'median', 'mean' or 'none' (default 'median').
 
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-% default join segment size is none
 if ~exist('join_segment_size','var') || isempty(join_segment_size)
     join_segment_size = 0;
 end

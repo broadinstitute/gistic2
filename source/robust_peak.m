@@ -32,21 +32,13 @@ function [wide_peak_start wide_peak_end thresh range_dist gene_list] = robust_pe
 %          range_dist = returns the range_distribution with (potentially)
 %                       new window size computed (speed-up so same range dist doesn't
 %                       have to be computed each time)
-% ---
-% $Id$
-% $Date: 2014-01-31 15:30:37 -0500 (Fri, 31 Jan 2014) $
-% $LastChangedBy: schum $
-% $Rev$
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-  
   if exist('approx_range','var') & ~isempty(approx_range)
     do_permutations = 0;
   else

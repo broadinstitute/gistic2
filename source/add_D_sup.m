@@ -26,50 +26,12 @@ function [D,supidx]=add_D_sup(D,supacc,supdesc,supdat,rc,allowoverwrite)
 %                  - Appends a row to the char array D.supdesc as given by desc
 %                  - Appends a row to the double array D.supdat as given by
 %                  data
-%       History:
-%           5 Oct 07 -- Commented first 15 lines.  Old/misleading code.
-%           Added check for 'col' switch.  If SUPACC already exists in the
-%           .supacc, then overwrite old .supdat for that SUPACC and exit.
-%           To turn this feature off, set ALLOWOVERWRITE to 0. -Jen Dobson
-%           (jdobson@broad.mit.edu)
-%
-%           11 Oct 07 -- Added support for 3 dimensional supdat (used if
-%           platforms are merged.)  - Jen Dobson (jdobson@broad.mit.edu)
-%
-%           26 Dec 07 -- Added support for ALLOWOVERWRITE to rows. 
-%           Fixed bug in supidx when ALLOWOVERWRITE -- Gaddy (gadgetz@broad.mit.edu)
-%
-%---
-% $Id$
-% $Date$
-% $LastChangedBy$
-% $Rev$
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
-
-% 
-% if ~exist('rc','var')
-%     D1=supacc;
-%     if exist('supdesc','var')
-%         rc=supdesc;
-%     else
-%         rc='cols';
-%     end
-%     switch rc(1:min(length(rc),3))
-%         case {'col','sam','con','arr'}
-%             [D,supidx]=add_D_sup(D,D1.supacc,D1.supdesc,D1.supdat,rc);
-%         case {'row','gen','mir'}
-%             [D,supidx]=add_D_sup(D,D1.gsupacc,D1.gsupdesc,D1.gsupdat,rc);
-%     end
-%     return
-% end
+% (See the accompanying LICENSE file for licensing details.)
 
 if ~exist('rc','var')
     rc='cols';

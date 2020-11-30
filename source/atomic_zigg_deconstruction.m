@@ -4,14 +4,11 @@ function Z = atomic_zigg_deconstruction(Bt)
   %segments for a given chromosome.
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-    
   % Each entry of B represents a copy number segment in a sample.
   % The columns of B are: 1)chrn, 2)st, 3)en, 4)amp, 5)sample, and 6)fract
   % The Fields of Z are: 1)chrn, 2)st, 3)en, 4)amp, 5)sample, 6)cn_st,

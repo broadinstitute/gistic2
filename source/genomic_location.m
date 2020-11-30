@@ -21,15 +21,11 @@ function [st,chr,bp]=genomic_location(X,i,cyto,enlarge_to_next_snp,use_commas)
 %! TODOC finish documenting this function
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-
-%% process optional arguments
 if ~exist('use_commas','var') || isempty(use_commas)
   use_commas=0;
 end

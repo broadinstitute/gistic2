@@ -15,30 +15,11 @@ function gp_gistic2_from_seg(varargin)
 %   [-logdat islog]
 
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
 % Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-
-%  COMPILE INSTRUCTIONS: (as of 2017-03-24, release 2.0.23)
-%       1) dotkit environment
-%           a) use Matlab-2014a  (MATLAB 8.3, compiler v4.14)
-%           b) use GCC-4.3  (minimum C/C++ compiler for this Matlab version)
-%           c) use Matlab_MCR (locates the Matlab Component Runtime: a
-%              caveat is that this will point to the wrong runtime once
-%              R2010b is no longer current).
-%
-%       2) Need to run 'mbuild -setup' at least once for the compiler to
-%          work
-%
-%       3) change to the output directory (where the executable will be created)
-%          and type:
-%              mcc -v -m -w enable gp_gistic2_from_seg
-%
-
-% create documentation-only dependencies
 Qs;
 
 %!opengl software - no longer supported by compiler

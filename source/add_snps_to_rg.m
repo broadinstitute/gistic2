@@ -1,22 +1,12 @@
-function rg=add_snps_to_rg(rg,C)
+function rg = add_snps_to_rg(rg,C)
 % adds snp locations to each gene
-%
-%---
-% $Id$
-% $Date: 2014-01-31 15:29:07 -0500 (Fri, 31 Jan 2014) $
-% $LastChangedBy: schum $
-% $Rev$
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-
-%%% add chrn, snps, and nsnps for each gene to rg
 if ~isfield(rg,'chrn')
   rg = add_chrn(rg);
 end

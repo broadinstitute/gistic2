@@ -40,17 +40,11 @@ function D = make_D_from_seg(segfile,markersfile,options,use_segarray)
 %   the equivalent of OPTIONS.use_segarray, which supersedes it. 
 
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-    
-%% process input parameters
-
-% options / use_old flag
 if exist('options','var')
     if ~isstruct(options)
         % third argument not a struct => obsolete use_old

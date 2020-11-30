@@ -14,12 +14,10 @@ function args_table=handle_args(dash_types,args)
 %           a = handle_args({'b','i','o'},varargin}
 
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
 % Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
+% (See the accompanying LICENSE file for licensing details.)
 
 sargs=strvcat(args);
 if isempty(sargs)

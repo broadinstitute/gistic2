@@ -99,15 +99,13 @@ function [D,focal_regs,params] = run_gistic2_from_seg(base_dir,seg_file,markers,
 %   ** PARAMS.islog - specify is segmented input data are in log ratio units (1)
 %    or  absolute copy number units (0). Default is autodetect from data.
 
-
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-  
+% (See the accompanying LICENSE file for licensing details.)
+
+
   %% Set defaults  
   
   if ~exist('params','var') || isempty(params)

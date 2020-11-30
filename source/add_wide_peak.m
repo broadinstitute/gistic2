@@ -1,14 +1,12 @@
 function [s,e,sample_s,sample_e]=add_wide_peak(z,chr_zero,has_unique_rows)
 
-% has_unique_rows also assumes no NaNs
-
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
+
+% has_unique_rows also assumes no NaNs
 
 if ~exist('has_unique_rows','var')
   has_unique_rows=0; 

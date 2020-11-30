@@ -18,19 +18,11 @@ function [D QA QD QAOD QDOA] = perform_deconstruction(D,cyto,unused,niters)
 % be left empty.
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-
-%% General Steps: 1) Starting with arm_levels = 0, perform deconstruction
-%%                2) Using data, find most likely arm-levels and centromeres
-%%                3) Repeat
-  
-  
   %% Step 1: Given broad level (init 0) and bpt (init telomere), do deconstruction 
   %% Step 2: Calculate segment length-amp distribution
   %% Step 3: Given distribution, find broad level and bpt that maximizes

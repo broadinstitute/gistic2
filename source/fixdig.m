@@ -8,23 +8,10 @@ function y = fixdig(x, n)
 %   See also: FIX, FLOOR, CEIL, ROUND, FIXDEC, ROUNDDIG, ROUNDDEC.
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
-
-%   Author:      Peter J. Acklam
-%   Time-stamp:  2004-09-22 20:07:59 +0200
-%   E-mail:      pjacklam@online.no
-%   URL:         http://home.online.no/~pjacklam
-% ---
-% $Id$
-% $Date: 2014-01-31 15:27:57 -0500 (Fri, 31 Jan 2014) $
-% $LastChangedBy: schum $
-% $Rev$
+% (See the accompanying LICENSE file for licensing details.)
 
    % Check number of input arguments.
    error(nargchk(2, 2, nargin));

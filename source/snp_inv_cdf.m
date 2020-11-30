@@ -1,21 +1,13 @@
 function g=snp_inv_cdf(d,score_type,conf_level)
 % Function takes g-score distribution d, score_type variable, and the desired percentile (conf_level), and
 % returns the g-score associated with the desired percentile (g{1} for amp, g{2} for del)
-% ---
-% $Id$
-% $Date$
-% $LastChangedBy$
-% $Rev$
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-  
   if isempty(d)
     error('Must supply snp_score background distribution!')
   end

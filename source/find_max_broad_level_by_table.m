@@ -1,13 +1,11 @@
 function [broad_level max_Q max_score num_levels] = find_max_broad_level_by_table(B,hd,xamp,ylen,arm_fract)
-      
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
+      
 
   unique_levels = unique(B(:,4)); %% Add zero as a level?
   num_levels = length(unique_levels);

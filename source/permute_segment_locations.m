@@ -25,23 +25,13 @@ function perm_ads = permute_segment_locations(Qs,nperm,nsamples,nsnps,clean_stru
 % 
 %  Outputs: perm_ads, a 1x2 cell array.  Each field is itself a 1 x nperm cell array 
 %  of permuted background scores for amps/dels, respectively.
-%
-% ---
-% $Id$
-% $Date: 2014-01-31 15:30:25 -0500 (Fri, 31 Jan 2014) $
-% $LastChangedBy: schum $
-% $Rev$
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-  
-  
   if ~exist('clean_struct','var') || isempty(clean_struct)
     clean_up = 0;
   else

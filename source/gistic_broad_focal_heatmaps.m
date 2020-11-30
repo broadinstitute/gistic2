@@ -18,6 +18,12 @@ function gistic_broad_focal_heatmaps(Dpath,params,broad_out_fname,focal_out_fnam
 %     chromosome arm units
 %
 
+% GISTIC software version 2.0
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
+% All Rights Reserved.
+% (See the accompanying LICENSE file for licensing details.)
+
 % default file type in png
 if ~exist('filetype','var') || isempty(filetype)
     filetype = 'png';

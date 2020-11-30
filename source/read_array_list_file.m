@@ -13,18 +13,12 @@ function use_arrays=read_array_list_file(fname,force_text,otherfields)
 %  the returned structure will have OTHERFIELDS in addition to the standard
 %  fields.
 
-
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-
-
-%% Read .xls (excel) file
 
 if ~exist('force_text','var')
   force_text = 0;

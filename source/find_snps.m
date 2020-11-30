@@ -14,19 +14,10 @@ function snps=find_snps(C,chrn,st,en,flanking)
 %   All arguments except D must be scalars.
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
-
-% ---
-% $Id$
-% $Date: 2007-12-03 15:57:57 -0500 (Mon, 03 Dec 2007) $
-% $LastChangedBy: rameen $
-% $Rev$
+% (See the accompanying LICENSE file for licensing details.)
 
 if ~isfield(C,'chrn')
   C=add_chrn(C);

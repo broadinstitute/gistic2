@@ -5,26 +5,11 @@ function gistic_plots(base_dir,ext,D,q,ads,regs,cyto,all_lesions_file,qv_scale,.
 %
 
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-
-% call from run_focal_gistic:
-% gistic_plots(base_dir,cur_ext,D,q,ads,cur_regs,cyto,[],[],[],[],[],[],params.qv_thresh,[],[],[],0,1,1,1);
-% default:
-% all_lesions_file,qv_scale,aLabels,dLabels,aTopLabels,dTopLabels,
-% ull,wp,no_stripes,add_broad_bars, gene_name_side
-%
-% qt = params.qv_thresh
-% add_broad_bars = 0
-% plot_raw_data= 1
-% make_png = 1
-% flip_dels = 1
-  
 if length(D.pos)~=length(q{1})
   error('Structure and GISTIC output file lengths do not match');
 end

@@ -49,24 +49,11 @@ function sp = plot_snp_score(base_dir,ext,D,q,ads,q_thresh,use_loglog,write_pdf,
 %
 
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-
-%   1 July 08: Added 'close all' at end of each loop on length(q) --
-%   jdobson@broad.mit.edu
-%
-% $Id$
-% $Date$
-% $LastChangedBy$
-% $Rev$
-
-% add_wide_peaks,
-%{
     for i=1:max(C.chrn)
         chrnpos(i)=round(mean(find(C.chrn==i)));
     end

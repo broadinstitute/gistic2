@@ -3,30 +3,10 @@ function snp_segments = find_snp_segments(Q,snp_idx,use_arm)
 % given snp or range of snps
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
-  
-% snp_segments = find_snp_segments(Q,snp_idx,use_arm)
-
-% Q (required): nsegs x 12 matrix containing ziggurat segments
-%               Q(:,2) contains the start snp and Q(:,3) contains
-%               the end snp of a segment
-% snp_idx (required): snp or set of snps used to identify which
-%                     segments to be peeled-off.  Any segment which
-%                     covers one or more of the snps in snp_idx will be 
-%                     returned.
-% use_arm (optional): returned snp_segments will include any segments on
-%                     the same arm and same same sample as segments
-%                     covering the snps. Arm identifiers are in Q(:,10).
-%                     default false
-%
-% Outputs: snp_segments = n x 1 vector containing indices of snp_segments
-% in Q covering the range snp_idx
+% (See the accompanying LICENSE file for licensing details.)
 
   if ~exist('use_arm','var') || isempty(use_arm)
       use_arm = false;

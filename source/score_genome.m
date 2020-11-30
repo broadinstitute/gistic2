@@ -34,13 +34,10 @@ function [scores D params] = score_genome(D,focals,params)
 % default values.
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
+% (See the accompanying LICENSE file for licensing details.)
 
   params = impose_default_value(params,'t_amp',0.1);
   params = impose_default_value(params,'t_del',0.1);

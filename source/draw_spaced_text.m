@@ -5,13 +5,10 @@ function draw_spaced_text(t,a,ymin,ymax,x1,x2,x3,f,extend_dense,lineparams,varar
 % x1, x2, x3 - posotion of arm and elbow and text (0.1, 0.3, 0.32)
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
+% (See the accompanying LICENSE file for licensing details.)
 
 axis([0 1 ymin ymax]);
 set(gca,'YDir','reverse');

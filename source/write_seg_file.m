@@ -2,15 +2,11 @@ function write_seg_file(fname,D,convert_to_raw,report_nan_segments)
 %WRITE_SEG_FILE write copy number data out as a segmented data file
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
-
-% defaults for optional arguments
 if ~exist('convert_to_raw','var') || isempty(convert_to_raw)
   convert_to_raw = false;
 end

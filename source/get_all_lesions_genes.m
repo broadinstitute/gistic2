@@ -2,13 +2,10 @@ function gene_names = get_all_lesions_genes(all_lesions_file,regs,reg_names)
 %GET_ALL_LESIONS_GENES get gene_names from the all_lesions file
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
+% (See the accompanying LICENSE file for licensing details.)
 
 if ~isempty(all_lesions_file) && exist(all_lesions_file,'file') 
   %gene names are supplied, so the gene names are used

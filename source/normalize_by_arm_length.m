@@ -1,6 +1,9 @@
 function [fract chrarms]= normalize_by_arm_length(D,Q,cyto,norm_type,ref_length,chrarms,skip1)
-  
-%% Function takes in a segmented data structure and its associated
+% calculate genomic segment length as fraction of chromosome arm
+%
+% [fract chrarms]= normalize_by_arm_length(D,Q,cyto,norm_type,ref_length,chrarms,skip1)
+%
+% Function takes in a segmented data structure and its associated
 %ziggurat matrix Q and two arrays, one containing
 %the armlengths of each chr_arm (sorted by chr arm) and the start
 %positions of each chr_arm.  It returns an array of length size(Q,1)
@@ -14,21 +17,13 @@ function [fract chrarms]= normalize_by_arm_length(D,Q,cyto,norm_type,ref_length,
 %of % of chromosome arms (i.e. max value is 2)
 %skip1: if chr arms not interrogated, max length for segments on chr = 1
 %when skip1 = 0 (default); segments of length 1 are made = NaN when skip1 = 1
-%---
-% $Id$
-% $Date: 2014-01-31 15:30:18 -0500 (Fri, 31 Jan 2014) $
-% $LastChangedBy: schum $
-% $Rev$
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
-
-
+% (See the accompanying LICENSE file for licensing details.)
+  
   if ~exist('norm_type','var')
     norm_type = 1;
   end

@@ -3,12 +3,10 @@ function display_D_heatmap(D)
   % create figure
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
   disp_p=struct('x',struct('sizes',[1 0.1 0.03 3 0.6 0.6 0.6],'gaps',[1 1 1 1 1 1 1 2],'border',0.2),...
              'y',struct('sizes',[ 0.2 3.5 0.08],'gaps',[2 1 1 2],'border',0.2),...

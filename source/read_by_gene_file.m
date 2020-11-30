@@ -2,12 +2,10 @@ function B = read_by_gene_file(fname,refgene)
 %READ_BY_GENE_FILE
 
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
 tbl = read_table(fname,{'%s%s%s',3,'%f'},char(9),1,'commentstyle','shell');
 B.sdesc = tbl.headers{1}(4:end);

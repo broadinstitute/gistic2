@@ -1,13 +1,11 @@
 function [QA QD QAOD QDOA] = make_final_Qs(Q)
-  
 
 % GISTIC software version 2.0
-% Copyright (c) 2011 Gad Getz, Rameen Beroukhim, Craig Mermel, 
-% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, 
-% Gordon Saksena, Michael O'Kelly, Barbara Tabak
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
+% Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
+  
 
   QA = Q(find(Q(:,4) > 0 & Q(:,6) >= 0),:);
   QD = Q(find(Q(:,4) < 0 & Q(:,6) <= 0),:);

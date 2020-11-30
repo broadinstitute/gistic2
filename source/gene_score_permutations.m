@@ -20,11 +20,10 @@ function [rg d sizes] = gene_score_permutations(D,y,rg,res)
 % the resolution used for the score distribution.
 
 % GISTIC software version 2.0
-% Copyright (c) 2011, 2016 Gad Getz, Rameen Beroukhim, Craig Mermel, 
+% Copyright (c) 2011-2017 Gad Getz, Rameen Beroukhim, Craig Mermel,
 % Jen Dobson, Steve Schumacher, Nico Stransky, Mike Lawrence, Gordon Saksena
 % All Rights Reserved.
-%
-% See the accompanying file LICENSE.txt for licensing details.
+% (See the accompanying LICENSE file for licensing details.)
 
 pthresh = 0.05;
 
