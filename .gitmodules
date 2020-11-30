@@ -1,0 +1,3 @@
+[submodule "snputil"]
+	path = snputil
+	url = https://github.com/broadinstitute/snputil
