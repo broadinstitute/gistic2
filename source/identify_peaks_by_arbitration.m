@@ -312,9 +312,9 @@ function [regs seg_assignment] = identify_peaks_by_arbitration(Z,Qs,ads,q,...
           % non-gene-gistic q-value is from SNP
           regs{k}(n).qv = q{k}(chr_zero+mi); 
         end
-        nsnps = length(Z.pos);
+        %!nsnps = length(Z.pos);
         if gene_gistic
-          regs{k}(n).st = min(nsnps,max([0;find(orig_ads(1:mi)<score_thresh(k))])+chr_zero+1);
+          regs{k}(n).st = min(chr_max,max([0;find(orig_ads(1:mi)<score_thresh(k))])+chr_zero+1);
           right_half = (mi:length(orig_ads))+1;
           regs{k}(n).en = min([ right_half(find(orig_ads(mi:end) < ...
                                               score_thresh(k)))+chr_zero+1 chr_max]);
@@ -324,7 +324,7 @@ function [regs seg_assignment] = identify_peaks_by_arbitration(Z,Qs,ads,q,...
           regs{k}(n).iter_score = mx;
         else
           % find first snp on chr scoring above score_thresh
-          regs{k}(n).st = min(nsnps,max([0; find(orig_sc(1:mi)<score_thresh(k))])+chr_zero+1);
+          regs{k}(n).st = min(chr_max,max([0; find(orig_sc(1:mi)<score_thresh(k))])+chr_zero+1);
           % find last snp on chr scoring above thresh  
           right_half = (mi:length(sc))+1;
           regs{k}(n).en = min([ right_half(find(orig_sc(mi:end) < ...
