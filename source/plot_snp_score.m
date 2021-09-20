@@ -54,11 +54,6 @@ function sp = plot_snp_score(base_dir,ext,D,q,ads,q_thresh,use_loglog,write_pdf,
 % All Rights Reserved.
 % (See the accompanying LICENSE file for licensing details.)
 
-    for i=1:max(C.chrn)
-        chrnpos(i)=round(mean(find(C.chrn==i)));
-    end
-%}
-
 if ~exist('flip_dels','var') || isempty(flip_dels)
   flip_dels=0;
 end
