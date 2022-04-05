@@ -24,8 +24,13 @@ rg_info = struct( ...
 );
 
 % output path
-refseq_path = '/xchip/gistic/variables/hg38/';
+refseq_path = '/xchip/beroukhimlab/gistic/reference_genomes/hg38/';
 output_basename = 'hg38.UCSC.add_miR.160920.refgene';
+
+% create output directory if necessary
+if ~exist(refseq_path)
+    mkdir(refseq_path)
+end
 
 refgene_fname = [UCSC_dump_path 'refGene.txt'];
 reflink_fname =[UCSC_dump_path 'refLink.txt'];

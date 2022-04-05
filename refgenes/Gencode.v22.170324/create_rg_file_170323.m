@@ -1,14 +1,14 @@
 % 2017-03-23 create refgene for GENCODE v22 genes
 % (derived from v18/create_test_rg_file_140127.m)
 
-%{
+
 clear
 
 % create test rg file
 GG = read_R_table('gencode_genes.tsv');     % GENCODE genes
 length(GG); %% 60483
 
-%}
+
 %% gene filtering
 
 GP = GG;
@@ -35,7 +35,7 @@ gene_names = {GP.gene_name};
 unames = unique(gene_names);
 [~,x1,x2] = match_string_sets_hash(gene_names,unames);
 M = sparse(x1,x2,true);
-%}
+
 
 %% deal with duplicate gene names
 samenamex = find(full(sum(M,1)) > 1); % index of genes with duplicate names
@@ -108,18 +108,25 @@ rg = struct('symb',gene_names,...
 );
 
 %% load cyto file
+% use hg38 cytoband map from UCSC 
+cyto = read_cytoband_data('cytoBand.txt'); % copy file locally
+                                           %!cyto = read_cytoband_data('/xchip/gistic/variables//20160920_UCSC_dump/hg38/cytoBand.txt');
 
-cyto = read_cytoband_data('/xchip/gistic/variables//20160920_UCSC_dump/hg38/cytoBand.txt');
+%!!! looks like hg38 gets overwritten by hg19 cyto file in 2017 code???
+cyto_file = './hg19/cyto_ucsc_111024/cyto_hg19_111024.mat';
+%!cyto_file ='/xchip/gistic/variables/cyto_ucsc_111024/hg19/cyto_hg19_111024.mat';
+
+%!load(cyto_file); %!!! this code was near the end
 
 %% create metadata
 
-rg_path = '/xchip/gistic/variables/gencode/v22/';
+rg_path = '/xchip/beroukhimlab/gistic/reference_genomes/gencode/v22/';
+%!rg_path = '/xchip/gistic/variables/gencode/v22/';
 output_file = ['GENCODE.v22.',date6,'.refgene.mat'];
 make_ver = '0.9 (beta)';
 
 url = 'ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_22/gencode.v22.annotation.gtf.gz';
 
-cyto_file = '/xchip/gistic/variables/cyto_ucsc_111024/hg19/cyto_hg19_111024.mat';
 [~,me] = unix('echo $USER');
 
 % metadata structure
@@ -133,8 +140,11 @@ rg_info = struct( ...
     'maker',        strtrim(me), ...
     'date',         date6 ...
 );
-load(cyto_file);
+
+% create output directory if necessary
+if ~exist(rg_path)
+    mkdir(rg_path)
+end
 
 %% save file
 save([rg_path output_file],'-v7.3','rg','rg_info','cyto');
-
